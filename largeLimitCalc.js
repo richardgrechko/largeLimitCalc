@@ -4,6 +4,9 @@ class largeLimitCalc
 	constructor(k,exp)
 	{
 		this.result = 0;
+		this.number = k;
+		this.power = exp;
+		this.exp = (Math.log10(k)*exp);
 		if((Math.log10(k)*exp)>=2147483647)
 		{
 			this.result = Infinity; // if it reaches ≥10^2147483647, it will overflow.
@@ -17,6 +20,23 @@ class largeLimitCalc
 			this.result = k**exp; // k^exp
 		}
 		return this.result;
+	}
+	toNumber()
+	{
+		let K = 0;
+		if(this.exp>=2147483647)
+		{
+			K = Infinity; // if it reaches ≥10^2147483647, it will overflow.
+		}
+		else if(this.exp>=10)
+		{
+			K = Math.pow(10,this.exp).toFixed(9) + "E" + Math.floor(this.exp); // return to scientific notation
+		}
+		else
+		{
+			K = this.number**this.power; // k^exp
+		}
+		return K;
 	}
 }
 
