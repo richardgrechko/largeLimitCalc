@@ -21,6 +21,7 @@ class largeLimitCalc
 }
 
 // Suggested by Uni in unitextwall.glitch.me
+// Go to unitextwall.glitch.me/~Uni
 class largeLimitCalc_Uni
 {
 	constructor(k,exp)
