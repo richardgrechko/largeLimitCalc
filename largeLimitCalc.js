@@ -4,9 +4,6 @@ class largeLimitCalc
 	constructor(k,exp)
 	{
 		this.result = 0;
-		this.number = k;
-		this.power = exp;
-		this.exp = (Math.log10(k)*exp);
 		if((Math.log10(k)*exp)>=2147483647)
 		{
 			this.result = Infinity; // if it reaches ≥10^2147483647, it will overflow.
