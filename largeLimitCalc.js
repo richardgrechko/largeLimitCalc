@@ -6,15 +6,15 @@ class largeLimitCalc
 		this.result = 0;
 		if((Math.log10(k)*exp)>=2147483647)
 		{
-			this.result = Infinity;
+			this.result = Infinity; // if it reaches ≥10^2147483647, it will overflow.
 		}
 		else if((Math.log10(k)*exp)>=10)
 		{
-			this.result = Math.pow(10,(Math.log10(k)*exp%1)).toFixed(9) + "E" + Math.floor(Math.log10(k)*exp);
+			this.result = Math.pow(10,(Math.log10(k)*exp%1)).toFixed(9) + "E" + Math.floor(Math.log10(k)*exp); // return to scientific notation
 		}
 		else
 		{
-			this.result = Math.pow(10,(Math.log10(k)*exp))
+			this.result = k**exp; // k^exp
 		}
 		return this.result;
 	}
