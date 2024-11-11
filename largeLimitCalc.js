@@ -19,24 +19,10 @@ class largeLimitCalc
 		{
 			this.result = k**exp; // k^exp
 		}
-		return this.result;
 	}
-	toNumber()
+	toString()
 	{
-		let K = 0;
-		if(this.exp>=2147483647)
-		{
-			K = Infinity; // if it reaches ≥10^2147483647, it will overflow.
-		}
-		else if(this.exp>=10)
-		{
-			K = Math.pow(10,this.exp).toFixed(9) + "E" + Math.floor(this.exp); // return to scientific notation
-		}
-		else
-		{
-			K = this.number**this.power; // k^exp
-		}
-		return K;
+		return this.result;
 	}
 }
 
@@ -59,6 +45,9 @@ class largeLimitCalc_Uni
 		{
 			this.result = k**exp; // k^exp
 		}
+	}
+	toString()
+	{
 		return this.result;
 	}
 }
