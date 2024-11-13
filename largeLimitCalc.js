@@ -22,6 +22,34 @@ class largeLimitCalc
 		return this.result;
 	}
 }
+// It can go up to E1.7E38
+class largeLimitCalcV2
+{
+	constructor(k,exp)
+	{
+		this.result = 0;
+		if((Math.log10(k)*exp)>=((2**127)-1))
+		{
+			this.result = Infinity; // if it reaches ≥E1.7E38, it will overflow.
+		}
+		else if((Math.log10(k)*exp)>=2147483647)
+		{
+			this.result = "E" + Math.log10(k)*exp; // continue
+		}
+		else if((Math.log10(k)*exp)>=10)
+		{
+			this.result = Math.pow(10,(Math.log10(k)*exp%1)).toFixed(9) + "E" + Math.floor(Math.log10(k)*exp); // return to scientific notation
+		}
+		else
+		{
+			this.result = k**exp; // k^exp
+		}
+	}
+	toString()
+	{
+		return this.result;
+	}
+}
 
 // Suggested by Uni in unitextwall.glitch.me
 // Go to unitextwall.glitch.me/~Uni
