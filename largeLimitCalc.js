@@ -54,9 +54,9 @@ largeLimitCalcV2.factorial = function(k)
 {
 	// NEW! Factorial
 	this.result = 0;
-	if(k>1)
+	if(k>=1)
 	{
-		this.result = Math.log10(Math.floor(k))+this.factorial(Math.floor(k-1)); // return to scientific notation
+		this.result = Math.log10(Math.floor(k))+this.factorial(Math.floor(k-1)); // hmph
 	}
 	else
 	{
