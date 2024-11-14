@@ -62,7 +62,7 @@ largeLimitCalcV2.factorial = function(k)
 	{
 		this.result = 0; // k^exp
 	}
-	return this.constructor(10,k)
+	return new largeLimitCalcV2(10,k).toString()
 }
 
 // Suggested by Uni in unitextwall.glitch.me
