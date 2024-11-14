@@ -45,6 +45,20 @@ class largeLimitCalcV2
 			this.result = k**exp; // k^exp
 		}
 	}
+	factorial(k)
+	{
+		// NEW! Factorial
+		this.result = 0;
+		if(k>1)
+		{
+			this.result = Math.log10(k)+this.prototype.factorial(k-1); // return to scientific notation
+		}
+		else
+		{
+			this.result = 0; // k^exp
+		}
+		return this.constructor(10,k)
+	}
 	toString()
 	{
 		return this.result;
