@@ -56,7 +56,7 @@ largeLimitCalcV2.factorial = function(k)
 	this.result = 0;
 	if(k>=1)
 	{
-		this.result = Math.log10(Math.floor(k))+this.factorial(Math.floor(k-1)); // hmph
+		this.result = Math.log10(Math.floor(k))+(this.result-Math.log10(Math.floor(k-1))); // hmph
 	}
 	else
 	{
