@@ -36,9 +36,9 @@ class largeLimitCalcV2
 		{
 			this.result = "E" + Math.log10(k)*exp; // continue
 		}
-		else if((Math.log10(k)*exp)>=10)
+		else if((Math.log10(k)*exp)>=12)
 		{
-			this.result = Math.pow(10,(Math.log10(k)*exp%1)).toFixed(9) + "E" + Math.floor(Math.log10(k)*exp); // return to scientific notation
+			this.result = Math.pow(10,(Math.log10(k)*exp%1)).toFixed(12) + "E" + Math.floor(Math.log10(k)*exp); // return to scientific notation
 		}
 		else
 		{
