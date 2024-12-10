@@ -23,7 +23,7 @@ class largeLimitCalc
 	}
 }
 // It can go up to E1.7E38
-class largeLimitCalcV2
+class largeLimitCalcV2 extends largeLimitCalc
 {
 	constructor(k,exp)
 	{
@@ -67,7 +67,7 @@ largeLimitCalcV2.factorial = function(k)
 
 // Suggested by Uni in unitextwall.glitch.me
 // Go to unitextwall.glitch.me/~Uni
-class largeLimitCalc_Uni
+class largeLimitCalc_Uni extends largeLimitCalc
 {
 	constructor(k,exp)
 	{
